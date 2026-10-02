@@ -1,8 +1,9 @@
-Shader "Custom/TestShader"
+Shader "Custom/TextureShader"
 {
     Properties
     {
         [MainColor] _BaseColor("Base Color", Color) = (1, 1, 1, 1)
+        [MainTexture] _BaseMap("Base Map", 2D) = "white" {}
     }
 
     SubShader
@@ -21,25 +22,36 @@ Shader "Custom/TestShader"
             struct Attributes
             {
                 float4 positionOS : POSITION;
+                float2 uv : TEXCOORD0;
             };
 
             struct Varyings
             {
                 float4 positionHCS : SV_POSITION;
+                float2 uv : TEXCOORD0;
             };
 
+            TEXTURE2D(_BaseMap);
+            SAMPLER(sampler_BaseMap);
+
             CBUFFER_START(UnityPerMaterial)
-                float4 _BaseColor;
+                half4 _BaseColor;
+                float4 _BaseMap_ST;
             CBUFFER_END
 
             Varyings vert(Attributes IN)
             {
-                return IN;
+                Varyings OUT;
+                OUT.positionHCS = TransformObjectToHClip(IN.positionOS.xyz);
+                OUT.uv = TRANSFORM_TEX(IN.uv, _BaseMap);
+                return OUT;
             }
 
             half4 frag(Varyings IN) : SV_Target
             {
-                return _BaseColor;
+                half4 color = SAMPLE_TEXTURE2D(_BaseMap, sampler_BaseMap, IN.uv) * _BaseColor;
+                half4 finalColor = color * _BaseColor;
+                return finalColor;
             }
             ENDHLSL
         }
