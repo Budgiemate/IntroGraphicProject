@@ -35,4 +35,5 @@ Today in class we learned about reflections, and light. Light was sorted into ca
 
 
 **Tutorial Activity**
-Today I modified the hologram shader by giving a texture scroll to a grid texture to make it look more believable as a hologram and then I added a distortion wave in the vertex shader that gives the effect of a wormhole.
+Today I modified the hologram shader by giving a texture scroll to a grid texture to make it look more believable as a hologram and then I added a distortion wave in the vertex shader that gives the effect of a wormhole. <img width="479" height="290" alt="image" src="https://github.com/user-attachments/assets/c4ce01b8-14af-4824-8232-41d53ff4332e" />
+
