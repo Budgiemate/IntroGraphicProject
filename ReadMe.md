@@ -32,3 +32,7 @@ Me and others had trouble doing the mix between shadergraph and hlsl for the spe
 
 **Task Reflection**
 Today in class we learned about reflections, and light. Light was sorted into categories, first being diffuse lighting which I have known about for a while from a digital painting course. I also have been aware of the ambient and specular lighting but not how it is approximated to work in shaders and games. All of the explanations of how the lighting works generally makes sense, however those large light equations including integrals were definitely jarring to see for the first time. Learning how to use hlsl files in shadergraph was difficult but I will need to practice to improve on that. Now with these light shaders I can now start utilizing them in my projects to make them look much better. 
+
+
+**Tutorial Activity**
+Today I modified the hologram shader by giving a texture scroll to a grid texture to make it look more believable as a hologram and then I added a distortion wave in the vertex shader that gives the effect of a wormhole.
