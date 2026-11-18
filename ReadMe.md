@@ -37,3 +37,7 @@ Today in class we learned about reflections, and light. Light was sorted into ca
 **Tutorial Activity**
 Today I modified the hologram shader by giving a texture scroll to a grid texture to make it look more believable as a hologram and then I added a distortion wave in the vertex shader that gives the effect of a wormhole. <img width="479" height="290" alt="image" src="https://github.com/user-attachments/assets/c4ce01b8-14af-4824-8232-41d53ff4332e" />
 
+**Tutorial Activity November 18th**
+Today I modified a shadow casting shader that now the shadow pulses and grows then shrinks. I chose this shader to modify because I wanted to learn about how shadow casting worked more. I wanted to achieve a pulse for the shadow to grow and shrink to make on object stand out be literally over shadowing other objects. And the shader turned out very well but I still need to explore how unity's shadow systems works. <img width="359" height="262" alt="image" src="https://github.com/user-attachments/assets/9525d123-030d-45ca-a43d-c561555ddb3f" />
+
+
